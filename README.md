@@ -8,7 +8,7 @@ Chest radiography is the most common imaging examination globally, critical for 
 ## How to take part?
 CheXpert uses a hidden test set for official evaluation of models. Teams submit their executable code on Codalab, which is then run on a test set that is not publicly readable. Such a setup preserves the integrity of the test results.
 
-# How to setup
+## How to setup
 > `pip install -r requirements.txt`
 > Designate train.csv and valid.csv in parameter.json. 
 > Sample csv files have been included in the data folder
@@ -16,7 +16,7 @@ CheXpert uses a hidden test set for official evaluation of models. Teams submit 
 > Designate cnn algorithm in the backbone in parameter.json
 > change hyperparameters as you want
 
-# How to train model
+## How to train model
 > Open cmd and change directory to Team34_code
 > python Chexpert/bin/train.py /cfg.json logdir --num_workers 4 --device_ids "0"
 
@@ -24,7 +24,7 @@ CheXpert uses a hidden test set for official evaluation of models. Teams submit 
 *If you run out of memory change the batch size in paramters.json
 
 
-# How to test
+## How to test
 Save best1.ckpt file in your logdir as best_result.ckpt.
 
 > Open cmd and change directory to Team34_code
