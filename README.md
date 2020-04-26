@@ -9,15 +9,15 @@ Chest radiography is the most common imaging examination globally, critical for 
 CheXpert uses a hidden test set for official evaluation of models. Teams submit their executable code on Codalab, which is then run on a test set that is not publicly readable. Such a setup preserves the integrity of the test results.
 
 ## How to setup
-> `pip install -r requirements.txt`
-> Designate train.csv and valid.csv in parameter.json. 
-> Sample csv files have been included in the data folder
-> If you want to train on bigger data visit chexpert homepage and download images
-> Designate cnn algorithm in the backbone in parameter.json
-> change hyperparameters as you want
+`pip install -r requirements.txt`
+Designate train.csv and valid.csv in parameter.json. 
+Sample csv files have been included in the data folder
+If you want to train on bigger data visit chexpert homepage and download images
+Designate cnn algorithm in the backbone in parameter.json
+change hyperparameters as you want
 
 ## How to train model
-> Open cmd and change directory to Team34_code
+Open cmd and change directory to Team34_code
 > python Chexpert/bin/train.py /cfg.json logdir --num_workers 4 --device_ids "0"
 
 *depending on your machine increase the device_ids for faster training
@@ -27,8 +27,8 @@ CheXpert uses a hidden test set for official evaluation of models. Teams submit 
 ## How to test
 Save best1.ckpt file in your logdir as best_result.ckpt.
 
-> Open cmd and change directory to Team34_code
-> Save your ground truth test data as test_ground_truth.csv in main folder
+Open cmd and change directory to Team34_code
+Save your ground truth test data as test_ground_truth.csv in main folder
 > python Chexpert/bin/test.py
 
 * if you want to plot the roc figure and get the AUC, run the command
