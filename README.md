@@ -18,7 +18,7 @@ change hyperparameters as you want
 
 ## How to train model
 Open cmd and change directory to Team34_code
-> python Chexpert/bin/train.py /cfg.json logdir --num_workers 4 --device_ids "0"
+> python Chexpert/bin/train.py ./parameters.json logdir --num_workers 4 --device_ids "0"
 
 *depending on your machine increase the device_ids for faster training
 *If you run out of memory change the batch size in paramters.json
